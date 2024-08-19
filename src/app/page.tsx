@@ -53,10 +53,7 @@ export default function Home() {
   return (
     <main className='absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]'>
       <div className='flex h-full justify-center'>
-        <div
-          id='content-container'
-          className='flex max-w-[1020px] w-full flex-col lg:px-0 px-4'
-        >
+        <div className='flex max-w-[1020px] w-full flex-col lg:px-0 px-4'>
           <div className='h-[66px] relative flex items-center justify-between w-full'>
             <h1 className='text-gray-300 text-2xl font-light hidden md:flex'>
               Sorting Algorithims
@@ -85,7 +82,7 @@ export default function Home() {
               </button>
             </div>
 
-            <div className='hidden sm:flex absolute top-[120%] left-0 w-full'>
+            <div className='hidden custom-w-h-control absolute top-[120%] left-0 w-full'>
               <div className='flex justify-between w-full text-gray-400 p-4 rounded border border-system-purple20 bg-system-purple80 bg-opacity-10 gap-6'>
                 <div className='flex flex-col items-start justify-start w-3/4'>
                   <h3 className='text-lg'>
@@ -122,8 +119,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className='relative h-[calc(100vh-66px)] w-full'>
-            <div className='absolute bottom-[32px] w-full mx-auto left-0 right-0 flex justify-center items-end'>
+          <div className='relative flex  bar-parent w-full'>
+            <div
+              className='absolute bar-container w-full mx-auto left-0 right-0 flex justify-center items-end'
+              id='content-container'
+            >
               {arrayToSort.map((value, index) => (
                 <div
                   key={index}

@@ -66,7 +66,7 @@ export const SortingAlgorithimProvider = ({
     const tempArray: number[] = [];
     const numLines = contentContainerWidth / 8;
     const containerHeight = window.innerHeight;
-    const maxLineHeight = Math.max(containerHeight - 420, 100);
+    const maxLineHeight = Math.max(containerHeight - 200, 1);
     for (let i = 0; i < numLines; i++) {
       tempArray.push(
         generationRandomNumberFromInterval(100, maxLineHeight - 100)

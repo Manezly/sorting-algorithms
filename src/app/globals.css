@@ -55,3 +55,19 @@ body {
 .pulse-animation {
   animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
+
+@media (min-width: 640px) and (min-height: 421px) {
+  custom-w-h-control {
+    display: flex;
+  }
+}
+
+@media (min-height: 421px) {
+  .bar-container {
+    bottom: 32px;
+  }
+
+  .bar-parent {
+    height: calc(100vh - 66px);
+  }
+}
